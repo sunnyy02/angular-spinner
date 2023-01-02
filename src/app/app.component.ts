@@ -7,7 +7,5 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'angular-ngx-dp';
-  loading$ = new BehaviorSubject<boolean>(true);
-  ngOnInit() {}
+  title = 'angular spinner';
 }

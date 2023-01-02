@@ -1,0 +1,10 @@
+<div>
+  <button (click)="load()">Click here to show spinner</button>
+  <app-loading-spinner *ngIf="loading$ | async; else contentBlock"></app-loading-spinner>
+  <ng-template #contentBlock>
+    <div>
+      <h4>Content loaded</h4>
+    </div>
+  </ng-template>
+
+</div>

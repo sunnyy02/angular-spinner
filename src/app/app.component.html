@@ -1,11 +1,10 @@
 <div class="content">
-  <h4>Loading Spinner</h4>
-  <app-loading-spinner *ngIf="loading$ | async; else contentBlock"></app-loading-spinner>
-  <ng-template #contentBlock>
-    <div class="row">
-      <h4>Content loaded</h4>
-    </div>
-  </ng-template>
+  <a [routerLink]="['/loading-demo']">template spinner</a>
+  <br>
+  <a [routerLink]="['/overlay-demo']">Overlay Spinner Demo</a>
+  <br>
+  <br>
   <div>
+    <router-outlet></router-outlet>
   </div>
 </div>
