@@ -4,8 +4,9 @@ import {
   HttpHandler,
   HttpEvent,
   HttpInterceptor,
+  HttpResponse,
 } from '@angular/common/http';
-import { delay, finalize, Observable } from 'rxjs';
+import { delay, finalize, map, Observable } from 'rxjs';
 import { SpinnerService } from './spinner.service';
 
 @Injectable()
@@ -17,12 +18,9 @@ export class ApiInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
     this.spinnerService.set(true);
-    console.log('spinner loading:' + this.spinnerService.isLoading);
     return next.handle(request).pipe(
-      delay(3000),
       finalize(() => {
-        this.spinnerService.set(false);
-        console.log('spinner loading:' + this.spinnerService.isLoading);
+        //this.spinnerService.set(false);
       })
     );
   }

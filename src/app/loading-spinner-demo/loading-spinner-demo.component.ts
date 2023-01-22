@@ -6,10 +6,8 @@ import { BehaviorSubject } from 'rxjs';
   templateUrl: './loading-spinner-demo.component.html',
   styleUrls: ['./loading-spinner-demo.component.scss'],
 })
-export class LoadingSpinnerDemoComponent implements OnInit {
+export class LoadingSpinnerDemoComponent {
   loading$ = new BehaviorSubject<boolean>(false);
-
-  ngOnInit(): void {}
 
   load() {
     // simulate a service call

@@ -7,6 +7,8 @@ import { SpinnerService } from '../spinner.service';
   styleUrls: ['./overlay-spinner.component.scss'],
 })
 export class OverlaySpinnerComponent implements OnInit {
+  isLoading$ = this.spinnerService.loading$;
+
   constructor(public spinnerService: SpinnerService) {}
 
   ngOnInit(): void {}

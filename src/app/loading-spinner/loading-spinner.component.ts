@@ -5,11 +5,4 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './loading-spinner.component.html',
   styleUrls: ['./loading-spinner.component.css'],
 })
-export class LoadingSpinnerComponent implements OnInit {
-  @Input()
-  blockUi = false;
-
-  constructor() {}
-
-  ngOnInit() {}
-}
+export class LoadingSpinnerComponent {}
